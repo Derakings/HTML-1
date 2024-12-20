@@ -3,15 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>form</title> 
+    <title>form</title> <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-
-    <!-- internal Navigation -->
-     <a href="../" aria aria-label="Go to About page">Go to About Page</a>
-
-
 
     <header>
         <h1>Altschool Form</h1>
@@ -19,51 +13,63 @@
 
     <main>
         <section>
-            
-            <h1>Sign up</h1>
-            <br>
+            <legend>Sign Up</legend>
             <p>Take the next steps to apply at Altschool Africa</p>
-            <br>
 
-            <form action="Form">
-                <label for="Name">First Name</label>
-                <br>
-                <input type=" First name" placeholder="Enter first name">
-                <br>
-                <br>
-                <label for="Name">Last Name</label>
-                <br>
-                <input type=" Last name" placeholder="Enter Last name">
-                <br>
-                <br>
+            <form action="Form" method="post">
+                <label for="First-name">First Name</label>
+                <input
+                 type="text"
+                 id="First-name" 
+                name="First-name"
+                 placeholder="Enter first name" 
+                 required
+                 />
+
+                 <!-- Last-name -->
+               <label for="Last-name">Last Name</label>
+                <input 
+                type=" text"
+                id="Last-name"
+                name="Last-name"
+                 placeholder="Enter Last name"
+                 />
+
+                 <!-- gender -->
                 <label for="Gender">Gender</label>
-                <br>
-                <select name="gender" id="select gender">
-                    <option>Select gender</option>
+                <select name="gender" id="select gender" required>
+                    <option  value="" disabled selected>Select gender</option>
                     <option>Male</option>
                     <option>Female</option>
+                    <option value="other">Other</option>
                   </select>
-                  <br>
-                  <br>
-                  <label for="Date of Birth"> Date of Birth</label>
-                  <br>
-                  <input type="date">
-                  <br>
-                  <br>
+
+                  <!-- date of birth -->
+                  <label for="dob"> Date of Birth</label>
+                  <input type="date" id="dob" name="dob" required />
+                  
+
                   <!-- email address -->
-                  <label for="email address">Email address</label>
-                  <br>
-                  <input type="email" placeholder="Enter email address">
-                  <br>
-                  <br>
-                  <label>Phone number</label>
-                  <br>
-                  <input type="Phone number" placeholder="08033282517">
-                  <br>
-                  <br>
+                  <label for="email">Email address</label>
+                  <input type="email" 
+                  id="email"
+                  name="email"
+                  placeholder="Enter email address"
+                  required
+                  />
+
+                  <!-- phone number -->
+                  <label >Phone number</label>
+                  <input type="tel"
+                  id="phone"
+                  name="phone"
+                   placeholder="08033282517"
+                   required
+                   />
+
                   <form>
                     <label for="country">Country</label>
-                    <select name="country" id="Select your country">
+                    <select name="country" id="Select your country" required>
                       <option value="">Select Country</option>
                       <option value="afghanistan">Afghanistan</option>
                       <option value="albania">Albania</option>
@@ -260,59 +266,60 @@
                       <option value="zambia">Zambia</option>
                       <option value="zimbabwe">Zimbabwe</option>
                     </select>
-                    <br>
-                    <br>
-                    <label>State/City of Residence</label>
-                    <br>
-                    <input type="Name" placeholder="Enter your state of residence">
-                    <br>
-                    <br>
-                    <label>How did you hear about us?</label>
-                    <br>
-                    <select name="Channel" id="Select channel" >
-                        <br>
-                        <option>Select channel</option>
-                        <option>Twitter</option>
-                        <option>Facebook</option>
-                        <option>Linkedin</option>
-                        <option>YouTube</option>
-                        <option>Friend</option>
-                        <option>Whatsapp</option>
-                        <option>Instagram</option>
-                        <option>Billboard</option>
-                        <option>Sales officer</option>
-                        <option>Others</option>
-                           
-                    </select>
-                        <br>
-                        <br>
-                        <label for="password">Password</label>
-                        <br>
-                        <input type="password" id="password" name="password" placeholder="Enter password">
-                        <br>
-                        <br>
-                        <label for="password">Confirm Password</label>
-                        <br>
-                        <input type="password" id="password" name="password" placeholder="Enter password again">
-                        <br>
-                        <br>
-                        <p>By clicking continue, I agree to <a href="https://altschoolafrica.com/terms-and-conditions">Terms of Use</a> and acknowledge that 
-                        I have read the <a href="https://altschoolafrica.com/privacy-policy"> Privacy Policy</a></p>
-                        <br>
+
                     
-                        <input type="submit">
+                    <label for="state-city">State/City of Residence</label>
+        
+                    <input 
+                    type="text"
+                    id="state-city"
+                    name="state-city"
+                     placeholder="Enter your state of residence"
+                     required
+                     />
+
+                    <label for="channel">How did you hear about us?</label>
+                    
+
+                    <select name="Channel" id="Select channel" required>
+                        <option value="" disabled selected>Select channel</option>
+                        <option value="twitter">Twitter</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="Linkedin">Linkedin</option>
+                        <option value="YouTube">YouTube</option>
+                        <option value="Friend">Friend</option>
+                        <option value="Whatsapp">Whatsapp</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="Billboard">Billboard</option>
+                        <option value="Sales officer">Sales officer</option>
+                        <option value="Others">Others</option>
+                         </select>
+
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter password">
+                        <label for="password">Confirm Password</label>
                         
+                        <input type="password" id="password" name="password" placeholder="Confirm password">
+                        <p>
+                            By clicking <strong>Continue</strong>, I agree to
+                             <a href="https://altschoolafrica.com/terms-and-conditions">Terms of Use</a>
+                              and acknowledge that I have read the <a href="https://altschoolafrica.com/privacy-policy"> Privacy Policy</a>
+                            </p>
+                        <input type="submit" value="continue" class="submit-button">  
                   </form>
         </section>
-
     </main>
 
+
     <footer>
-        <p>&nbsp;&nbsp;&nbsp;&copy;<strong>2024 Ojimba Chidera. All right reserved.</strong></p>
-        <br><a href="#Top">Back to Top</a>
-    </footer>
+        <!-- internal Navigation -->
+         <nav>
+     <a href="../" aria aria-label="Go to About page">Go to About Page</a>
+    </nav>
 
+        <p>&copy; <strong>2024 Ojimba Chidera. All right reserved.</strong></p>
 
-    
+        <a href="#Top" aria-label="Back to top of the page">Back to Top</a>
+    </footer>   
 </body>
 </html>
